@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 12px;
 }
 
 a {
@@ -13,24 +14,24 @@ ul li {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 3.3em;
     color: #5055df;
     margin: 0 25px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 2em;
     color: #40a8f9;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 1.5em;
     font-weight: 700;
     margin-top: 0;
 }
 
 .contenedor {
-    padding: 20px 10px;
+    padding: 15px 10px;
     margin: 30px 40px;
 }
 
@@ -48,10 +49,15 @@ header .contenedor {
     justify-content: space-between;
     width: 90%;
     margin: auto;
+    font-size: 1.2em;
 }
 
 header ul {
     display: flex;
+}
+
+#presentacion p {
+    font-size: 1.4em;
 }
 
 /* MAIN */
@@ -77,6 +83,10 @@ main.container-grid {
 #redes-sociales .rs {
     margin: 0 5px;
     font-size: 1.3em;
+}
+
+#redes-sociales a {
+    font-size: 1.5em;
 }
 
 /* SOBRE MI */
@@ -133,7 +143,7 @@ footer {
     margin: 30px auto;
     text-align: center;
     color: #5a6169;
-    font-size: .9em;
+    font-size: 1em;
 }
 
 #contacto form {
@@ -170,13 +180,112 @@ textarea {
     padding: 15px;
 }
 
+/* ANIMACIONES */
+.anifadeInOut {
+    animation: fadeInOut 5s infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.anibounce {
+    /* animation-name: bounce; */
+    animation-delay: 10s;
+    animation-name: bounce;
+    animation-duration: 1s;
+    transform-origin: center bottom;
+}
+
+@keyframes bounce {
+from,
+20%,
+53%,
+80%,
+to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+40%,
+43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+}
+
+70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+}
+
+90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+}
+}
 
 
 /* MEDIA */
 /* Estilos para pantallas de 720px en adelante */
 @media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
     h1 {
         margin: 0;
+        font-size: 6em;
+    }
+
+    h2 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p.logo {
+        font-size: 1.2em;
+    }
+
+    #presentacion p {
+        font-size: 2.5em;
+    }
+
+    #redes-sociales a {
+        font-size: 2.5em;
+    }
+
+    #sobre-mi {
+        font-size: 1.2em;
+    }
+
+    #mis-trabajos {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 2em;
     }
 
     .contenedor {
@@ -185,6 +294,10 @@ textarea {
 
     header .contenedor {
         display: block;
+    }
+
+    header a {
+        font-size: 2.5em;
     }
 
     ul.lista-menu {
@@ -201,4 +314,26 @@ textarea {
         grid-template-columns: 1fr;
         gap: 1em;
     }
+
+    #contacto form {
+        display: grid;
+        grid-template-rows: 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    input[type="text"], input[type="email"] {
+        font-size: 2.2em;
+        width: 100%;
+    }
+    
+    textarea {
+        font-size: 2.2em;
+    }
+    
+    #contacto input[type="submit"] {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    
 }
