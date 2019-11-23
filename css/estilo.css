@@ -16,7 +16,7 @@ ul li {
 h1 {
     font-size: 3.3em;
     color: #5055df;
-    margin: 0 25px;
+    margin: 0 15px;
 }
 
 h2 {
@@ -249,15 +249,15 @@ to {
 /* Estilos para pantallas de 720px en adelante */
 @media (max-width: 768px) {
     body {
-        font-size: 12px;
+        font-size: 11px;
     }
     h1 {
         margin: 0;
-        font-size: 6em;
+        font-size: 7em;
     }
 
     h2 {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
     h3 {
@@ -265,7 +265,7 @@ to {
     }
 
     p.logo {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     #presentacion p {
@@ -285,7 +285,7 @@ to {
     }
 
     footer {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .contenedor {
@@ -297,7 +297,98 @@ to {
     }
 
     header a {
-        font-size: 2.5em;
+        font-size: 1.5em;
+    }
+
+    ul.lista-menu {
+        padding: 0;
+    }
+
+    main.container-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-trabajos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    #contacto form {
+        display: grid;
+        grid-template-rows: 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    input[type="text"], input[type="email"] {
+        font-size: 2.2em;
+        width: 100%;
+    }
+    
+    textarea {
+        font-size: 2.2em;
+    }
+    
+    #contacto input[type="submit"] {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    
+}
+
+@media (max-width: 360px) {
+    body {
+        font-size: 10px;
+    }
+    h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.1em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p.logo {
+        font-size: 1.5em;
+    }
+
+    #presentacion p {
+        font-size: 1.5em;
+    }
+
+    #redes-sociales a {
+        font-size: 2em;
+    }
+
+    #sobre-mi {
+        font-size: 1.2em;
+    }
+
+    #mis-trabajos {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    .contenedor {
+        margin: 20px 35px;
+    }
+
+    header .contenedor {
+        display: block;
+    }
+
+    header a {
+        font-size: 1.2em;
     }
 
     ul.lista-menu {
